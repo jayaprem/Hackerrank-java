@@ -1,0 +1,48 @@
+https://www.hackerrank.com/challenges/dynamic-array/problem
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+class Solution {
+    static void dynamicArray(int n, ArrayList<ArrayList<Integer>> queries) {
+    int i,j,lans=0;
+    ArrayList<ArrayList<Integer>> s=new ArrayList<ArrayList<Integer>>();
+    for(i=0;i<n;i++) s.add(new ArrayList<Integer>());
+    for(i=0;i<queries.size();i++)
+    {
+        int q,x,y;
+        ArrayList<Integer> al=new ArrayList<Integer>(queries.get(i));
+        q=al.get(0);
+        x=al.get(1);
+        y=al.get(2);
+        ArrayList<Integer> ans=s.get((x ^ lans) % n);
+        
+          if(q==1) ans.add(y);           
+           if(q==2) {
+               lans=ans.get(y%ans.size());
+              System.out.println(lans);
+           }
+       }
+       
+    }
+
+    public static void main(String[] args) throws IOException {
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+       int queries=sc.nextInt();
+       ArrayList<ArrayList<Integer>> v=new ArrayList<ArrayList<Integer>>();
+       for(int i=0;i<queries;i++)
+       {
+           int q=sc.nextInt();
+           int x=sc.nextInt();
+           int y=sc.nextInt();
+           ArrayList<Integer> alm=new ArrayList<Integer>();
+           alm.add(q);
+           alm.add(x);
+           alm.add(y);
+           v.add(alm);
+    }
+    dynamicArray(n,v);
+}
+}
