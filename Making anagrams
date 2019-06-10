@@ -1,4 +1,6 @@
-should return an integer representing the minimum number of deletions needed to make the strings anagrams.import java.io.*;
+https://www.hackerrank.com/challenges/making-anagrams/problem
+pgm should return an integer representing the minimum number of deletions needed to make the strings anagrams.
+import java.io.*;
 import java.math.*;
 import java.security.*;
 import java.text.*;
