@@ -1,0 +1,31 @@
+https://www.hackerrank.com/challenges/delete-a-node-from-a-linked-list/problem
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {...
+
+  
+    static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
+              
+        if(position==0)
+        {
+            head=head.next;
+            return head;
+        }
+            SinglyLinkedListNode current=head;
+            SinglyLinkedListNode n=head.next;
+        for(int i=0;i<position-1;i++)
+        {
+            current=current.next;
+            n=current.next;
+            
+        }
+        current.next=n.next;
+        return head;
+
+    }
