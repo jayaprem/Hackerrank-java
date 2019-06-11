@@ -1,0 +1,14 @@
+https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list/problem
+static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data) {
+SinglyLinkedListNode temp=new SinglyLinkedListNode(data);
+temp.next=null;
+if(head==null)
+{
+    head=temp;
+    return head;
+}
+temp.next=head;
+head=temp;
+return head;
+
+    }
