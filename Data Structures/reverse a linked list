@@ -1,0 +1,30 @@
+https://www.hackerrank.com/challenges/reverse-a-linked-list/problem
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {...
+ 
+    static SinglyLinkedListNode reverse(SinglyLinkedListNode head) {
+        
+SinglyLinkedListNode prev=null;
+SinglyLinkedListNode current=head;
+SinglyLinkedListNode next=null;
+if(head==null || head.next==null)
+return head;
+ while(current!=null)
+{
+     next=current.next;
+     current.next=prev;
+     prev=current;
+     current=next;
+
+ }
+ head=prev;
+ return head;
+
+    }
