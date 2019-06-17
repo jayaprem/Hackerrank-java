@@ -1,0 +1,20 @@
+static int findMergeNode(SinglyLinkedListNode headA, SinglyLinkedListNode head) {
+
+SinglyLinkedListNode currA = headA;
+SinglyLinkedListNode currB = headB;
+    
+    while (currA != currB) {
+        if (currA.next == null) {
+            currA = headB;
+        } else {
+            currA = currA.next;
+        }
+        
+        if (currB.next == null) {
+            currB = headA;
+        } else {
+            currB = currB.next;
+        }
+    }
+    return currA.data;
+    }
