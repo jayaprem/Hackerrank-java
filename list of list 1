@@ -1,0 +1,23 @@
+https://www.hackerrank.com/challenges/diagonal-difference/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+ public static int diagonalDifference(List<List<Integer>> ar) {
+  int sum=0,sum1=0;  
+for(int i=0;i<ar.size();i++)
+{
+   sum+=ar.get(i).get(i);
+   sum1+=ar.get(i).get(ar.size()-(i+1));
+}
+return Math.abs(sum-sum1);
+    }
+
+}
+
+
