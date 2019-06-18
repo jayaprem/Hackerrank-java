@@ -1,0 +1,20 @@
+https://www.hackerrank.com/challenges/birthday-cake-candles/problem?h_r=next-challenge&h_v=zen
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    // Complete the birthdayCakeCandles function below.
+   
+    static int birthdayCakeCandles(int[] ar) {
+         ArrayList<Integer> al=new ArrayList<Integer>();
+Arrays.sort(ar);
+for(int i=0;i<ar.length;i++)
+{
+    al.add(ar[i]);
+}
+return Collections.frequency(al,ar[ar.length-1]);
+    }
