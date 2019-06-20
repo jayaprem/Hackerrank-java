@@ -1,0 +1,26 @@
+https://www.hackerrank.com/challenges/java-lambda-expressions/problem?h_r=next-challenge&h_v=zen
+import java.io.*;
+import java.util.*;
+interface PerformOperation {
+ boolean check(int a);
+}
+class MyMath {
+ public static boolean checker(PerformOperation p, int num) {
+  return p.check(num);
+ }
+
+
+
+  public static PerformOperation isOdd()
+  {
+      return(int x)->x%2!=0;
+  }
+  public static PerformOperation isPrime()
+  {
+      return(int x)->java.math.BigInteger.valueOf(x).isProbablePrime(1);
+  }
+  public static PerformOperation isPalindrome()
+  {
+      return(int x)->Integer.toString(x).equals(new StringBuilder(Integer.toString(x)).reverse().toString());
+  }
+}
